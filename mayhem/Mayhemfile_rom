@@ -1,0 +1,9 @@
+project: savantenvs/eka2l1
+target: rom
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/rom/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rom
+    libfuzzer: true
+    timeout: 5
