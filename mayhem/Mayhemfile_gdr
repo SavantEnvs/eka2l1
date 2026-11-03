@@ -1,0 +1,9 @@
+project: savantenvs/eka2l1
+target: gdr
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/gdr/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gdr
+    libfuzzer: true
+    timeout: 5

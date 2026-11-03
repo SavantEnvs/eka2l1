@@ -1,0 +1,9 @@
+project: savantenvs/eka2l1
+target: svgb
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/svgb/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_svgb
+    libfuzzer: true
+    timeout: 5

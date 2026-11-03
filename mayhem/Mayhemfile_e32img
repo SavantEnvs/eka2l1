@@ -1,0 +1,9 @@
+project: savantenvs/eka2l1
+target: e32img
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/e32img/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_e32img
+    libfuzzer: true
+    timeout: 5

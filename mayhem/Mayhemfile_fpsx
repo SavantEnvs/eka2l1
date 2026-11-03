@@ -1,0 +1,9 @@
+project: savantenvs/eka2l1
+target: fpsx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fpsx/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_fpsx
+    libfuzzer: true
+    timeout: 5

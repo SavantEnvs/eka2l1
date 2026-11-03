@@ -1,0 +1,9 @@
+project: savantenvs/eka2l1
+target: spi
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/spi/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_spi
+    libfuzzer: true
+    timeout: 5

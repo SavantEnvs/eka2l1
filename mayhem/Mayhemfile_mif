@@ -1,0 +1,9 @@
+project: savantenvs/eka2l1
+target: mif
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mif/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mif
+    libfuzzer: true
+    timeout: 5

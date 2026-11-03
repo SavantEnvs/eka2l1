@@ -1,0 +1,9 @@
+project: savantenvs/eka2l1
+target: mbm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mbm/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mbm
+    libfuzzer: true
+    timeout: 5

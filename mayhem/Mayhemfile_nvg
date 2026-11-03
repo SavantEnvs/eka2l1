@@ -1,0 +1,9 @@
+project: savantenvs/eka2l1
+target: nvg
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/nvg/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_nvg
+    libfuzzer: true
+    timeout: 5
